@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.talkingclock.databinding.ActivityMainBinding;
 
@@ -29,6 +31,14 @@ public class MainActivity extends AppCompatActivity {
                 replaceFragment(new Setting_Fragment());
             }
             return true;
+        });
+
+        findViewById(R.id.fab).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Add_Alarm.class);
+                startActivity(intent);
+            }
         });
     }
 
