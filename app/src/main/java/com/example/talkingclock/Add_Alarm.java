@@ -106,7 +106,7 @@ public class Add_Alarm extends AppCompatActivity {
                             String.format("%02d", (picker.getHour() - 12)+ " : "+ String.format("%02d", picker.getMinute() )+" PM" )
                     );
                 }else {
-                    binding.selectedTime.setText(picker.getHour()+" : " + picker.getMinute() + " AM");
+                    binding.selectedTime.setText(picker.getHour()+" : " + picker.getMinute() + " AM ");
                 }
 
                 calendar = Calendar.getInstance();
